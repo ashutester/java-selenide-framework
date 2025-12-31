@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SauceDemo" verbose="1">
+    <listeners>
+        <listener class-name="com.listeners.MyTestNGListeners"></listener>
+        <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"></listener>
+        <listener class-name="com.listeners.RetryTestsForEntireSuite"></listener>
+    </listeners>
+    <test name="Everything">
+        <classes>
+            <class name="com.testcases.LoginTests"/>
+            <class name="com.testcases.ProductPageTests"/>
+            <class name="com.testcases.CheckoutTests"/>
+            <class name="com.testcases.checkoutUserDetailsTests"/>
+        </classes>
+    </test>
+</suite>
